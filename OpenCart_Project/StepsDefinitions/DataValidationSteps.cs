@@ -178,5 +178,70 @@ namespace OpenCart.StepsDefinitions
         {
             _DataValidationPage.VerifyIfTheProductIsAddedToCart(Product_Name);
         }
+
+        [Then(@"MouseHover On Desktop Header And Click On '(.*)'")]
+        public void MouseHoverOnDesktopHeaderAndClickOnMacButton(string Button)
+        {
+            _DataValidationPage.MouseHoverOnDesktopHeaderAndClickOnMacButton( Button);
+        }
+
+        public string Product_Name;
+        public string Product_Price;
+        [Then(@"Fetch Product Details And Add To WishList")]
+        public void FetchProductDetailsAndAddProductToWishList()
+        {
+            Product_Name = _DataValidationPage.FetchProductName();
+            Product_Price =  _DataValidationPage.FetchProductPriceAndAddProductToWishList();
+        }
+
+        [Then(@"Verify '(.*)' Message is Displayed")]
+        public void VerifySuccessfullAddedMessageIsDisplayed(string ExpectedMessage)
+        {
+            _DataValidationPage.VerifySuccessfullAddedMessageIsDisplayed(ExpectedMessage);
+
+        }
+
+        [Then(@"Click On Wish List")]
+        public void ClickOnWishList()
+        {
+            _DataValidationPage.ClickOnWishList();
+        }
+
+        [Then(@"Verify The Product In WishList")]
+        public void VerifyProductInWishList()
+        {
+            _DataValidationPage.VerifyProductInWishList(Product_Name, Product_Price);
+        }
+
+        [Then(@"Remove Product From WishList")]
+        public void RemoveProductFromWishList()
+        {
+            _DataValidationPage.RemoveProductFromWishList();
+        }
+
+        [Then(@"Click '(.*)' Button")]
+        public void ClickEditAccountButton(string Edit_Button)
+        {
+            _DataValidationPage.ClickEditAccountButton(Edit_Button);
+        }
+
+        [Then(@"Verify '(.*)' Page Is Displayed")]
+        public void VerifyAccountInfoPageIsDisplayed(string Page_Title)
+        {
+            _DataValidationPage.VerifyAccountInfoPageIsDisplayed(Page_Title);
+        }
+
+        [Then(@"Change FirstName LastName Click Continue Button")]
+        public void ChangeFirstAndLastNameAndClickContinueBUtton()
+        {
+            long milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            _DataValidationPage.ChangeFirstAndLastNameAndClickContinueBUtton("Test"+milliseconds, "zenq"+milliseconds);
+        }
+
+        [Then(@"Verify '(.*)' Is Displayed")]
+        public void VerifySuccessMessageIsDislayed(string SuccessfullyUpdated_Message)
+        {
+            _DataValidationPage.VerifySuccessMessageIsDislayed(SuccessfullyUpdated_Message);
+        }
     }
 }

@@ -76,8 +76,18 @@ namespace OpenCart.Pages.PageConstants
         public static By CartButton = By.Id("cart");
         public static By ProductInCart = By.XPath("//div[@id='cart']/button/following-sibling::ul/descendant::td/following-sibling::td/a");
         public static By RemoveProductFromCart = By.XPath("//button[@title='Remove']");
-
-
-
+        public static By FetchPriceFromProduct = By.XPath("//p[@class='price']");
+        public static By FetchNameFromDesktopProduct = By.XPath("//div[@class='row']/div/div/div/following-sibling::div/div/h4/a");
+        public static By DesktopHeader = By.XPath("//div[contains(@class,'collapse navbar')]/ul/li[1]/a");
+        public static By DesktopHeaderDropdownList = By.XPath("//div[contains(@class,'collapse navbar')]/ul/li[1]/a/following-sibling::div/div/ul/li/a");
+        public static By AddToWishListButton = By.XPath("//button[contains(@data-original-title ,'Add to Wish List')]");
+        public static By SuccessAlertMessage = By.XPath("//div[contains(@class,'success alert')]");
+        public static By WishListButton = By.Id("wishlist-total");
+        public static By WishListProductName = By.XPath("//div[@class='table-responsive']/table/thead/following-sibling::tbody/tr/td[1]/following-sibling::td[1]/a");
+        public static By WishListProductPrice = By.XPath("//div[@class='table-responsive']/table/thead/following-sibling::tbody/tr/td[1]/following-sibling::td[4]/div");
+        public static By RemoveProductFromWishList = By.XPath("//a[@data-original-title='Remove']");
+        public static By ColoumnRightList = By.XPath("//aside[@id='column-right']/div/a");
+        public static By MyAccountInfoTitleText = By.XPath("//div[@id='content']/h1");
     }
+
 }

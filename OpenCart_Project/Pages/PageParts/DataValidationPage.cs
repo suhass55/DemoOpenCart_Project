@@ -235,9 +235,9 @@ namespace OpenCart.Pages.PageParts
             Assert.AreEqual(RegisterAccountExpectedText, RegisterAccountPageText);
             log4Net.Info("Register Account page title verified and user navigated successfully");
         }
-        public void EnterRegistrationDetails(string FirstName, string LastName,string Email_ID,string TeleNum,string Pwd,string ConfirmPwd)
+        public void EnterRegistrationDetails(string FirstName, string LastName, string Email_ID, string TeleNum, string Pwd, string ConfirmPwd)
         {
-            SafeSendKeys(DataValidationPageLocators.RegisterFirstNameTextField, FirstName , 20);
+            SafeSendKeys(DataValidationPageLocators.RegisterFirstNameTextField, FirstName, 20);
             SafeSendKeys(DataValidationPageLocators.RegisterlastNameTextField, LastName, 20);
             SafeSendKeys(DataValidationPageLocators.RegisterEmailTextField, Email_ID, 20);
             SafeSendKeys(DataValidationPageLocators.RegisterTelephoneTextField, TeleNum, 20);
@@ -337,6 +337,96 @@ namespace OpenCart.Pages.PageParts
             SafeActionClick(DataValidationPageLocators.RemoveProductFromCart);
         }
 
+        public void MouseHoverOnDesktopHeaderAndClickOnMacButton(string Button)
+        {
+            SafeMouseHover(DataValidationPageLocators.DesktopHeader, 20, "Desktop Header");
+            SafeClickFromListOfElements(DataValidationPageLocators.DesktopHeaderDropdownList, Button);
+            waitForTime(5);
+
+        }
+
+        public string FetchProductName()
+        {
+            string Product_Name = SafeGetText(DataValidationPageLocators.FetchNameFromDesktopProduct, 15, "Product Name");
+            Console.WriteLine(Product_Name);
+            return Product_Name;
+        }
+
+        public string FetchProductPriceAndAddProductToWishList()
+        {
+            string Product_ActualPrice = SafeGetText(DataValidationPageLocators.FetchPriceFromProduct, 15, "Product Price");
+            string Product_Price = Product_ActualPrice.Replace("\r\nEx Tax: $100.00", "");
+            Console.WriteLine(Product_Price);
+            SafeActionClick(DataValidationPageLocators.AddToWishListButton);
+            return Product_Price;
+        }
+
+        public void VerifySuccessfullAddedMessageIsDisplayed(string ExpectedMessage)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.SuccessAlertMessage, 20);
+            string ProductAddedMessage = SafeGetText(DataValidationPageLocators.SuccessAlertMessage, 20, "Product Added Message");
+            string ProductMessage = ProductAddedMessage.Replace("\r\n×", "");
+            Console.WriteLine(ProductMessage);
+            Assert.AreEqual(ExpectedMessage, ProductMessage);
+            log4Net.Info("Product Added Successfully");
+        }
+
+        public void ClickOnWishList()
+        {
+            SafeActionClick(DataValidationPageLocators.WishListButton);
+        }
+
+        public void VerifyProductInWishList(string Product_Name, string Product_Price)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.WishListProductName, 20);
+            string ProductActualName = SafeGetText(DataValidationPageLocators.WishListProductName, 15, "Product Actual Name");
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.WishListProductPrice, 20);
+            string ProductActualPrice = SafeGetText(DataValidationPageLocators.WishListProductPrice, 15, "Product Actual Price");
+            Console.WriteLine(ProductActualName);
+            Console.WriteLine(ProductActualPrice);
+            Assert.AreEqual(Product_Name, ProductActualName);
+            Assert.AreEqual(Product_Price, ProductActualPrice);
+            log4Net.Info("Product Added Is Equal To Product Present In WishList");
+        }
+
+        public void RemoveProductFromWishList()
+        {
+            SafeActionClick(DataValidationPageLocators.RemoveProductFromWishList);
+        }
+
+        public void ClickEditAccountButton(string Edit_Button)
+        {
+            SafeClickFromListOfElements(DataValidationPageLocators.ColoumnRightList, Edit_Button);
+        }
+
+        public void VerifyAccountInfoPageIsDisplayed(string Page_Title)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.MyAccountInfoTitleText, 20);
+            string MyAccountInfoPageActualText = SafeGetText(DataValidationPageLocators.MyAccountInfoTitleText, 15, "My Account Info Page Title");
+            Console.WriteLine(MyAccountInfoPageActualText);
+            Assert.AreEqual(Page_Title, MyAccountInfoPageActualText);
+            log4Net.Info("User Navigated Successfully");
+
+        }
+
+        public void ChangeFirstAndLastNameAndClickContinueBUtton(string FirstName, string LastName)
+        {
+            Driver.FindElement(DataValidationPageLocators.RegisterFirstNameTextField).Clear();
+            SafeSendKeys(DataValidationPageLocators.RegisterFirstNameTextField, FirstName, 20);
+            Driver.FindElement(DataValidationPageLocators.RegisterlastNameTextField).Clear();
+            SafeSendKeys(DataValidationPageLocators.RegisterlastNameTextField, LastName, 20);
+            SafeActionClick(DataValidationPageLocators.RegisterAccountContinueButton);
+
+        }
+
+        public void VerifySuccessMessageIsDislayed(string SuccessfullyUpdated_Message)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.SuccessAlertMessage, 20);
+            string ChangesUpdated_Message = SafeGetText(DataValidationPageLocators.SuccessAlertMessage, 15, "Changes Updated Message");
+            Console.WriteLine(ChangesUpdated_Message);
+            Assert.AreEqual(SuccessfullyUpdated_Message, ChangesUpdated_Message);
+            log4Net.Info("User Details Successfully Updated");
+        }
     }
 }
 
