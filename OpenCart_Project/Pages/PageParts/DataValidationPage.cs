@@ -333,8 +333,8 @@ namespace OpenCart.Pages.PageParts
             string ActualProductInCart = SafeGetText(DataValidationPageLocators.ProductInCart, 20, "Product Present In Cart");
             Console.WriteLine(ActualProductInCart);
             Assert.AreEqual(Product_Name, ActualProductInCart);
-            log4Net.Info("User Successfully Navigated To HomePage");
             SafeActionClick(DataValidationPageLocators.RemoveProductFromCart);
+            log4Net.Info("User Successfully Navigated To HomePage");
         }
 
         public void MouseHoverOnDesktopHeaderAndClickOnMacButton(string Button)
