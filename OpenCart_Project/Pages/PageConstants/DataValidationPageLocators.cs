@@ -88,6 +88,15 @@ namespace OpenCart.Pages.PageConstants
         public static By RemoveProductFromWishList = By.XPath("//a[@data-original-title='Remove']");
         public static By ColoumnRightList = By.XPath("//aside[@id='column-right']/div/a");
         public static By MyAccountInfoTitleText = By.XPath("//div[@id='content']/h1");
+        public static By SigleProductPageTitle = By.XPath("//div[@id='content']/div/div/following-sibling::div/div/following-sibling::h1");
+        public static By WriteReviewLink = By.XPath("//div[@class='rating']/p/a[2]");
+        public static By ReviewWriterTextField = By.Id("input-name");
+        public static By YourReviewTextAreaField = By.Id("input-review");
+        public static By ReviewRatings = By.XPath("//input[@type='radio'][5]");
+        public static By ContinueButton = By.Id("button-review");
+        public static By SearchTextField = By.Id("search");
+        public static By SearchButton = By.XPath("//input[@name='search']/following-sibling::span/button");
+        public static By SearchedProductTitle = By.XPath("//div[@class='product-thumb']/div/following-sibling::div/div/h4/a");
     }
 
 }

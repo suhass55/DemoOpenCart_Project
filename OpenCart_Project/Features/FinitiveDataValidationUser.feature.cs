@@ -346,6 +346,135 @@ this.ScenarioInitialize(scenarioInfo);
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("5: Demo.OpenCart Writing Review On Product")]
+        [NUnit.Framework.CategoryAttribute("5")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        public virtual void _5Demo_OpenCartWritingReviewOnProduct()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "5",
+                    "Regression",
+                    "Smoke"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5: Demo.OpenCart Writing Review On Product", null, tagsOfScenario, argumentsOfScenario);
+#line 59
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 60
+ testRunner.Given("Navigate to Finitive url And Verify \'Your Store\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 61
+ testRunner.Then("Click On \'Login\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 62
+ testRunner.And("Login with credintials \'Testzenq55@gmail.com\' and \'Test321\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 63
+ testRunner.Then("Click on Home button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 64
+ testRunner.And("Verify \'Your Store\' is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 65
+ testRunner.Then("Open \'MacBook\' Product Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 66
+ testRunner.And("Verify If \'MacBook\' Page Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 67
+ testRunner.Then("Write a Review And Click Continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 68
+ testRunner.And("Verify that \'Thank you for your review. It has been submitted to the webmaster fo" +
+                        "r approval.\' Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 69
+ testRunner.Then("Click On \'Logout\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 70
+ testRunner.And("Verify \'Account Logout\' Message Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("5: Demo.OpenCart Search For a Product And Verify")]
+        [NUnit.Framework.CategoryAttribute("6")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        public virtual void _5Demo_OpenCartSearchForAProductAndVerify()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "6",
+                    "Regression",
+                    "Smoke"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5: Demo.OpenCart Search For a Product And Verify", null, tagsOfScenario, argumentsOfScenario);
+#line 73
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 74
+ testRunner.Given("Navigate to Finitive url And Verify \'Your Store\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 75
+ testRunner.Then("Click On \'Login\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 76
+ testRunner.And("Login with credintials \'Testzenq55@gmail.com\' and \'Test321\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 77
+ testRunner.Then("Search For \'iPhone\' Product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 78
+ testRunner.And("Verify That The \'iPhone\' Product Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 79
+ testRunner.Then("Click On \'Logout\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 80
+ testRunner.And("Verify \'Account Logout\' Message Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

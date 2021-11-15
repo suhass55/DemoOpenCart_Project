@@ -369,6 +369,7 @@ namespace OpenCart.Pages.PageParts
             Console.WriteLine(ProductMessage);
             Assert.AreEqual(ExpectedMessage, ProductMessage);
             log4Net.Info("Product Added Successfully");
+     
         }
 
         public void ClickOnWishList()
@@ -426,6 +427,58 @@ namespace OpenCart.Pages.PageParts
             Console.WriteLine(ChangesUpdated_Message);
             Assert.AreEqual(SuccessfullyUpdated_Message, ChangesUpdated_Message);
             log4Net.Info("User Details Successfully Updated");
+        }
+
+        public void OpenSpecificProductPage(string Product_Name)
+        {
+            SafeClickFromListOfElements(DataValidationPageLocators.OpenCartProductList, Product_Name);
+        }
+
+        public void VerifyIfProductPageIsDisplayed(string Page_Title)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.SigleProductPageTitle, 20);
+            string ProductPageTitle = SafeGetText(DataValidationPageLocators.SigleProductPageTitle, 15, "Single Product Page Title");
+            Console.WriteLine(ProductPageTitle);
+            Assert.AreEqual(ProductPageTitle, Page_Title);
+            log4Net.Info("User Navigated To Product Page");
+        }
+
+        public void WriteReviewAndClickContinue(string Reviewer_Name, string Review)
+        {
+            SafeActionClick(DataValidationPageLocators.WriteReviewLink);
+            waitForTime(5);
+            Driver.FindElement(DataValidationPageLocators.ReviewWriterTextField).Clear();
+            SafeSendKeys(DataValidationPageLocators.ReviewWriterTextField, Reviewer_Name, 15, "Reviewer Name");
+            SafeSendKeys(DataValidationPageLocators.YourReviewTextAreaField, Review, 15, "Reviewer Name");
+            SafeActionClick(DataValidationPageLocators.ReviewRatings);
+            SafeActionClick(DataValidationPageLocators.ContinueButton);
+
+        }
+
+        public void VerifyConfirmationTextIsDisplayed(string Confirmation_Message)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.SuccessAlertMessage, 20);
+            string Confirmation_ExpectedMessage = SafeGetText(DataValidationPageLocators.SuccessAlertMessage, 15, "Changes Updated Message");
+            Console.WriteLine(Confirmation_ExpectedMessage);
+            Assert.AreEqual(Confirmation_Message, Confirmation_ExpectedMessage);
+            log4Net.Info("Confirmation Message Is Displayed");
+            waitForTime(5);
+        }
+
+        public void SearchForAProduct(string Product_Search)
+        {
+            SafeSendKeys(DataValidationPageLocators.SearchTextField, Product_Search, 15, "Product Searched");
+            SafeActionClick(DataValidationPageLocators.SearchButton);
+
+        }
+
+        public void VerifyTheSearchedProductIsDisplayed(string Product_Search)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.SearchedProductTitle, 20);
+            string ProductActualTitle = SafeGetText(DataValidationPageLocators.SearchedProductTitle, 15, "Searched Product Title");
+            Console.WriteLine(ProductActualTitle);
+            Assert.AreEqual(ProductActualTitle, Product_Search);
+            log4Net.Info("Product Is Displayed And Verified");
         }
     }
 }

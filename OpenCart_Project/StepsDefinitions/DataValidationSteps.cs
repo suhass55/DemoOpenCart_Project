@@ -243,5 +243,41 @@ namespace OpenCart.StepsDefinitions
         {
             _DataValidationPage.VerifySuccessMessageIsDislayed(SuccessfullyUpdated_Message);
         }
+
+        [Then(@"Open '(.*)' Product Page")]
+        public void OpenSpecificProductPage(string Product_Name)
+        {
+            _DataValidationPage.OpenSpecificProductPage(Product_Name);
+        }
+
+        [Then(@"Verify If '(.*)' Page Is Displayed")]
+        public void VerifyIfProductPageIsDisplayed(string Page_Title)
+        {
+            _DataValidationPage.VerifyIfProductPageIsDisplayed(Page_Title);
+        }
+
+        [Then(@"Write a Review And Click Continue")]
+        public void WriteReviewAndClickContinue()
+        {
+            _DataValidationPage.WriteReviewAndClickContinue("Testing", "Excellent product with good efficiency and features");
+        }
+
+        [Then(@"Verify that '(.*)' Is Displayed")]
+        public void VerifyConfirmationTextIsDisplayed(string Confirmation_Message)
+        {
+            _DataValidationPage.VerifyConfirmationTextIsDisplayed(Confirmation_Message);
+        }
+
+        [Then(@"Search For '(.*)' Product")]
+        public void SearchForAProduct(string Product_Search)
+        {
+            _DataValidationPage.SearchForAProduct(Product_Search);
+        }
+
+        [Then(@"Verify That The '(.*)' Product Is Displayed")]
+        public void VerifyTheSearchedProductIsDisplayed(string Product_Search)
+        {
+            _DataValidationPage.VerifyTheSearchedProductIsDisplayed(Product_Search);
+        }
     }
 }

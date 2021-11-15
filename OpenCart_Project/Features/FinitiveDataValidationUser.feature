@@ -55,4 +55,26 @@ Scenario: 4: Demo.OpenCart ChangingUser Name
 	Then Click On 'Logout' Button
 	And Verify 'Account Logout' Message Is Displayed
 
-	
+	@5 @Regression @Smoke
+Scenario: 5: Demo.OpenCart Writing Review On Product
+	Given Navigate to Finitive url And Verify 'Your Store'
+	Then Click On 'Login' Button In The DropDown
+	And Login with credintials 'Testzenq55@gmail.com' and 'Test321' 
+	Then Click on Home button
+	And Verify 'Your Store' is displayed
+	Then Open 'MacBook' Product Page
+	And Verify If 'MacBook' Page Is Displayed
+	Then Write a Review And Click Continue
+	And Verify that 'Thank you for your review. It has been submitted to the webmaster for approval.' Is Displayed
+	Then Click On 'Logout' Button
+	And Verify 'Account Logout' Message Is Displayed
+
+	@6 @Regression @Smoke
+Scenario: 6: Demo.OpenCart Search For a Product And Verify
+	Given Navigate to Finitive url And Verify 'Your Store'
+	Then Click On 'Login' Button In The DropDown
+	And Login with credintials 'Testzenq55@gmail.com' and 'Test321'
+	Then Search For 'iPhone' Product
+	And Verify That The 'iPhone' Product Is Displayed
+	Then Click On 'Logout' Button
+	And Verify 'Account Logout' Message Is Displayed
