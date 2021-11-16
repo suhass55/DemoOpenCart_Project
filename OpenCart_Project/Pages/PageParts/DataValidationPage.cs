@@ -393,6 +393,7 @@ namespace OpenCart.Pages.PageParts
         public void RemoveProductFromWishList()
         {
             SafeActionClick(DataValidationPageLocators.RemoveProductFromWishList);
+            waitForTime(5);
         }
 
         public void ClickEditAccountButton(string Edit_Button)
@@ -480,6 +481,38 @@ namespace OpenCart.Pages.PageParts
             Assert.AreEqual(ProductActualTitle, Product_Search);
             log4Net.Info("Product Is Displayed And Verified");
         }
+
+        public void NewsletterSubscription(string Subscribe_Input)
+        {
+            SafeClickFromListOfElements(DataValidationPageLocators.SubscribeRadioButtons, Subscribe_Input);
+            SafeActionClick(DataValidationPageLocators.ContinueSudscriptionButton);
+
+        }
+
+        public void AddNewAddressButton()
+        {
+            SafeActionClick(DataValidationPageLocators.NewAddressButton);
+        }
+
+        public void AddAddressDetails(string FirstName, string LastName, string Company_Name, string Address, string City_Name, string Postal_Code, string Country, string Region)
+        {
+            SafeSendKeys(DataValidationPageLocators.RegisterFirstNameTextField, FirstName, 20);
+            SafeSendKeys(DataValidationPageLocators.RegisterlastNameTextField, LastName, 20);
+            SafeSendKeys(DataValidationPageLocators.RegisterCompanyNameTextField, Company_Name, 20);
+            SafeSendKeys(DataValidationPageLocators.RegisterAddressOneTextField, Address, 20);
+            SafeSendKeys(DataValidationPageLocators.RegisterCityNameTextField, City_Name, 20);
+            SafeSendKeys(DataValidationPageLocators.RegisterPostalCodeTextField, Postal_Code, 20);
+            ScrollIntoView(DataValidationPageLocators.DropDownCountry);
+            SafeActionClick(DataValidationPageLocators.DropDownCountry);
+            SafeClickFromListOfElements(DataValidationPageLocators.DropDownListCountry, Country);
+            SafeActionClick(DataValidationPageLocators.RegionDropDown);
+            SafeClickFromListOfElements(DataValidationPageLocators.RegionDropDownList, Region);
+            SafeActionClick(DataValidationPageLocators.ContinueSudscriptionButton);
+
+
+        }
+
+
     }
 }
 

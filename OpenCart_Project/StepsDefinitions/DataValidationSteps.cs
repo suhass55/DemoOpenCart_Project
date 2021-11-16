@@ -279,5 +279,25 @@ namespace OpenCart.StepsDefinitions
         {
             _DataValidationPage.VerifyTheSearchedProductIsDisplayed(Product_Search);
         }
+
+        [Then(@"Subscribe Newsletter By Clicking On '(.*)' Radio Button")]
+        public void NewsletterSubscription(string Subscribe_Input)
+        {
+            _DataValidationPage.NewsletterSubscription(Subscribe_Input);
+        }
+
+        [Then(@"Click On Add New Address Button")]
+        public void AddNewAddressButton()
+        {
+            _DataValidationPage.AddNewAddressButton();
+        }
+
+        [Then(@"Add Address Details")]
+        public void AddAddressDetails()
+        {
+            long milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            _DataValidationPage.AddAddressDetails("Test" + milliseconds, "ZenQA", "zenq" + milliseconds, "Hyderabad", "Madapur City", "560065", "Japan", "Tokya");
+        }
+
     }
 }

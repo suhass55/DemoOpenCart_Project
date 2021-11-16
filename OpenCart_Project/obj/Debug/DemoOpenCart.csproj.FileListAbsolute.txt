@@ -868,8 +868,8 @@ D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Proje
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\bin\Debug\Utf8Json.xml
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\bin\Debug\WebDriver.xml
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\bin\Debug\WebDriver.Support.xml
-D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\obj\Debug\DemoOpenCart.csproj.AssemblyReference.cache
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\obj\Debug\DemoOpenCart.csproj.ResolveComReference.cache
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\obj\Debug\DemoOpenCart.csproj.CoreCompileInputs.cache
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\obj\Debug\OpenCart.dll
 D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\obj\Debug\OpenCart.pdb
+D:\Finitive_internal_Triangle\Finitive_08_11_2021\Fintive_project\OpenCart_Project\obj\Debug\DemoOpenCart.csproj.AssemblyReference.cache

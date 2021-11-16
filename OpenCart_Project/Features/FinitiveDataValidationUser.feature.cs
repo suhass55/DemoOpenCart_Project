@@ -419,18 +419,18 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("5: Demo.OpenCart Search For a Product And Verify")]
+        [NUnit.Framework.DescriptionAttribute("6: Demo.OpenCart Search For a Product And Verify")]
         [NUnit.Framework.CategoryAttribute("6")]
         [NUnit.Framework.CategoryAttribute("Regression")]
         [NUnit.Framework.CategoryAttribute("Smoke")]
-        public virtual void _5Demo_OpenCartSearchForAProductAndVerify()
+        public virtual void _6Demo_OpenCartSearchForAProductAndVerify()
         {
             string[] tagsOfScenario = new string[] {
                     "6",
                     "Regression",
                     "Smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5: Demo.OpenCart Search For a Product And Verify", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6: Demo.OpenCart Search For a Product And Verify", null, tagsOfScenario, argumentsOfScenario);
 #line 73
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -471,6 +471,123 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 80
  testRunner.And("Verify \'Account Logout\' Message Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("7: Demo.OpenCart Subscribe Newsletter")]
+        [NUnit.Framework.CategoryAttribute("7")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        public virtual void _7Demo_OpenCartSubscribeNewsletter()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "7",
+                    "Regression",
+                    "Smoke"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7: Demo.OpenCart Subscribe Newsletter", null, tagsOfScenario, argumentsOfScenario);
+#line 83
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 84
+ testRunner.Given("Navigate to Finitive url And Verify \'Your Store\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 85
+ testRunner.Then("Click On \'Login\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 86
+ testRunner.And("Login with credintials \'Testzenq55@gmail.com\' and \'Test321\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 87
+ testRunner.Then("Click \'Newsletter\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 88
+ testRunner.Then("Subscribe Newsletter By Clicking On \'Yes\' Radio Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 89
+ testRunner.And("Verify that \'Success: Your newsletter subscription has been successfully updated!" +
+                        "\' Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 90
+ testRunner.Then("Click On \'Logout\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 91
+ testRunner.And("Verify \'Account Logout\' Message Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("8: Demo.OpenCart Add New Address")]
+        [NUnit.Framework.CategoryAttribute("8")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        public virtual void _8Demo_OpenCartAddNewAddress()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "8",
+                    "Regression",
+                    "Smoke"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("8: Demo.OpenCart Add New Address", null, tagsOfScenario, argumentsOfScenario);
+#line 94
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 95
+ testRunner.Given("Navigate to Finitive url And Verify \'Your Store\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 96
+ testRunner.Then("Click On \'Login\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 97
+ testRunner.And("Login with credintials \'Testzenq55@gmail.com\' and \'Test321\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 98
+ testRunner.Then("Click \'Address Book\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 99
+ testRunner.Then("Click On Add New Address Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 100
+ testRunner.Then("Add Address Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -55,6 +55,16 @@ namespace OpenCart.Pages.PageConstants
         public static By RegisterAccountActualText = By.XPath("//div[@id='content']/h1");
         public static By RegisterFirstNameTextField = By.Id("input-firstname");
         public static By RegisterlastNameTextField = By.Id("input-lastname");
+        public static By RegisterCompanyNameTextField = By.Id("input-company");
+        public static By RegisterAddressOneTextField = By.Id("input-address-1");
+        public static By RegisterCityNameTextField = By.Id("input-city");
+        public static By RegisterPostalCodeTextField = By.Id("input-postcode");
+        public static By DropDownCountry = By.Id("input-country");
+        public static By DropDownListCountry = By.XPath("//select[@name='country_id']/option");
+        public static By RegionDropDown = By.Id("input-zone");
+        public static By RegionDropDownList = By.Id("//select[@name='zone_id']/option");
+
+
         public static By RegisterEmailTextField = By.Id("input-email");
         public static By RegisterTelephoneTextField = By.Id("input-telephone");
         public static By RegisterPasswordTextField = By.Id("input-password");
@@ -97,6 +107,9 @@ namespace OpenCart.Pages.PageConstants
         public static By SearchTextField = By.Id("search");
         public static By SearchButton = By.XPath("//input[@name='search']/following-sibling::span/button");
         public static By SearchedProductTitle = By.XPath("//div[@class='product-thumb']/div/following-sibling::div/div/h4/a");
+        public static By SubscribeRadioButtons = By.XPath("//div[@class='form-group']/label/following-sibling::div/label");
+        public static By ContinueSudscriptionButton = By.XPath("//input[@value='Continue']");
+        public static By NewAddressButton = By.XPath("//div[@class='pull-right']");
     }
 
 }

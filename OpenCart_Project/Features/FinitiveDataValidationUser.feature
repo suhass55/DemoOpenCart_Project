@@ -78,3 +78,26 @@ Scenario: 6: Demo.OpenCart Search For a Product And Verify
 	And Verify That The 'iPhone' Product Is Displayed
 	Then Click On 'Logout' Button
 	And Verify 'Account Logout' Message Is Displayed
+
+	@7 @Regression @Smoke
+Scenario: 7: Demo.OpenCart Subscribe Newsletter 
+	Given Navigate to Finitive url And Verify 'Your Store'
+	Then Click On 'Login' Button In The DropDown
+	And Login with credintials 'Testzenq55@gmail.com' and 'Test321'
+	Then Click 'Newsletter' Button
+	Then Subscribe Newsletter By Clicking On 'Yes' Radio Button
+	And Verify that 'Success: Your newsletter subscription has been successfully updated!' Is Displayed
+	Then Click On 'Logout' Button
+	And Verify 'Account Logout' Message Is Displayed
+
+	@8 @Regression @Smoke
+Scenario: 8: Demo.OpenCart Add New Address
+	Given Navigate to Finitive url And Verify 'Your Store'
+	Then Click On 'Login' Button In The DropDown
+	And Login with credintials 'Testzenq55@gmail.com' and 'Test321'
+	Then Click 'Address Book' Button
+	Then Click On Add New Address Button
+	Then Add Address Details
+	Then Click On 'Logout' Button
+	And Verify 'Account Logout' Message Is Displayed
+
