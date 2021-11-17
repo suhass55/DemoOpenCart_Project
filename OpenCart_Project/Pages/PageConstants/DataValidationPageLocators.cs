@@ -63,6 +63,7 @@ namespace OpenCart.Pages.PageConstants
         public static By DropDownListCountry = By.XPath("//select[@name='country_id']/option");
         public static By RegionDropDown = By.Id("input-zone");
         public static By RegionDropDownList = By.Id("//select[@name='zone_id']/option");
+        public static By RegionButton = By.XPath("//option[@value='3513']");
 
 
         public static By RegisterEmailTextField = By.Id("input-email");
@@ -99,6 +100,7 @@ namespace OpenCart.Pages.PageConstants
         public static By ColoumnRightList = By.XPath("//aside[@id='column-right']/div/a");
         public static By MyAccountInfoTitleText = By.XPath("//div[@id='content']/h1");
         public static By SigleProductPageTitle = By.XPath("//div[@id='content']/div/div/following-sibling::div/div/following-sibling::h1");
+        public static By ProductPageTitle = By.XPath("//div[@id='content']/h2[1]");
         public static By WriteReviewLink = By.XPath("//div[@class='rating']/p/a[2]");
         public static By ReviewWriterTextField = By.Id("input-name");
         public static By YourReviewTextAreaField = By.Id("input-review");

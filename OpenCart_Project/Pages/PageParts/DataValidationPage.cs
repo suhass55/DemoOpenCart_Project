@@ -506,11 +506,23 @@ namespace OpenCart.Pages.PageParts
             SafeActionClick(DataValidationPageLocators.DropDownCountry);
             SafeClickFromListOfElements(DataValidationPageLocators.DropDownListCountry, Country);
             SafeActionClick(DataValidationPageLocators.RegionDropDown);
-            SafeClickFromListOfElements(DataValidationPageLocators.RegionDropDownList, Region);
+            SafeActionClick(DataValidationPageLocators.RegionButton);
+
+            //SafeClickFromListOfElements(DataValidationPageLocators.RegionDropDownList, Region);
             SafeActionClick(DataValidationPageLocators.ContinueSudscriptionButton);
 
 
         }
+
+        public void VerifyProductPageDisplayed(string Page_Title)
+        {
+            WaitUntilElementIsDisplayed(DataValidationPageLocators.ProductPageTitle, 20);
+            string ProductPageTitle = SafeGetText(DataValidationPageLocators.ProductPageTitle, 15, "Single Product Page Title");
+            Console.WriteLine(ProductPageTitle);
+            Assert.AreEqual(Page_Title, ProductPageTitle);
+            log4Net.Info("User Navigated To Product Page");
+        }
+
 
 
     }

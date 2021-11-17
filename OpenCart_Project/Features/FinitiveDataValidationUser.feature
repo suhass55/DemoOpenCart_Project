@@ -91,13 +91,18 @@ Scenario: 7: Demo.OpenCart Subscribe Newsletter
 	And Verify 'Account Logout' Message Is Displayed
 
 	@8 @Regression @Smoke
-Scenario: 8: Demo.OpenCart Add New Address
+Scenario: 8: Demo.OpenCart Verify Specified Pages Are Displayed
 	Given Navigate to Finitive url And Verify 'Your Store'
 	Then Click On 'Login' Button In The DropDown
 	And Login with credintials 'Testzenq55@gmail.com' and 'Test321'
-	Then Click 'Address Book' Button
-	Then Click On Add New Address Button
-	Then Add Address Details
+	Then Click On 'My Account' Button In The DropDown
+	And Verify 'My Account' page displayed
+	Then Click On 'Order History' Button In The DropDown
+	And Verify 'Order History' page is displayed
+	Then Click On 'Transactions' Button In The DropDown
+	And Verify 'Your Transactions' page is displayed
+	Then Click On 'Downloads' Button In The DropDown
+	And Verify 'Account Downloads' page displayed
 	Then Click On 'Logout' Button
 	And Verify 'Account Logout' Message Is Displayed
 

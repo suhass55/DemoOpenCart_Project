@@ -296,7 +296,14 @@ namespace OpenCart.StepsDefinitions
         public void AddAddressDetails()
         {
             long milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            _DataValidationPage.AddAddressDetails("Test" + milliseconds, "ZenQA", "zenq" + milliseconds, "Hyderabad", "Madapur City", "560065", "Japan", "Tokya");
+            _DataValidationPage.AddAddressDetails("Test" + milliseconds, "ZenQA", "zenq" + milliseconds, "Hyderabad", "Madapur City", "560065", "United Kingdom", "Angus");
+        }
+
+        [Then(@"Verify '(.*)' page displayed")]
+
+        public void VerifyProductPageDisplayed(string Page_Title)
+        {
+            _DataValidationPage.VerifyProductPageDisplayed(Page_Title);
         }
 
     }

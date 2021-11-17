@@ -539,18 +539,18 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("8: Demo.OpenCart Add New Address")]
+        [NUnit.Framework.DescriptionAttribute("8: Demo.OpenCart Verify Specified Pages Are Displayed")]
         [NUnit.Framework.CategoryAttribute("8")]
         [NUnit.Framework.CategoryAttribute("Regression")]
         [NUnit.Framework.CategoryAttribute("Smoke")]
-        public virtual void _8Demo_OpenCartAddNewAddress()
+        public virtual void _8Demo_OpenCartVerifySpecifiedPagesAreDisplayed()
         {
             string[] tagsOfScenario = new string[] {
                     "8",
                     "Regression",
                     "Smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("8: Demo.OpenCart Add New Address", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("8: Demo.OpenCart Verify Specified Pages Are Displayed", null, tagsOfScenario, argumentsOfScenario);
 #line 94
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -581,13 +581,34 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Login with credintials \'Testzenq55@gmail.com\' and \'Test321\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 98
- testRunner.Then("Click \'Address Book\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Click On \'My Account\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 99
- testRunner.Then("Click On Add New Address Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Verify \'My Account\' page displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 100
- testRunner.Then("Add Address Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Click On \'Order History\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 101
+ testRunner.And("Verify \'Order History\' page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 102
+ testRunner.Then("Click On \'Transactions\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 103
+ testRunner.And("Verify \'Your Transactions\' page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 104
+ testRunner.Then("Click On \'Downloads\' Button In The DropDown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 105
+ testRunner.And("Verify \'Account Downloads\' page displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 106
+ testRunner.Then("Click On \'Logout\' Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 107
+ testRunner.And("Verify \'Account Logout\' Message Is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
